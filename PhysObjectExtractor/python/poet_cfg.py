@@ -313,8 +313,6 @@ if isData:
     process.p = cms.Path(
         process.myelectrons
         + process.mymuons
-        + process.mytaus
-        + process.myphotons
         + process.mypvertex
         + process.looseAK4Jets
         + process.patJetCorrFactorsReapplyJEC
@@ -329,14 +327,11 @@ if isData:
         + process.Type1CorrForNewJEC
         + process.slimmedMETsNewJEC
         + process.mymets
-        #                    +process.mypackedcandidate
     )
 else:
     process.p = cms.Path(
         process.myelectrons
         + process.mymuons
-        + process.mytaus
-        + process.myphotons
         + process.mypvertex
         + process.mygenparticle
         + process.looseAK4Jets
@@ -352,7 +347,6 @@ else:
         + process.Type1CorrForNewJEC
         + process.slimmedMETsNewJEC
         + process.mymets
-        #                    +process.mypackedcandidate
     )
 process.maxEvents.input = options.maxEvents
 process.TFileService.fileName = options.outputFile
